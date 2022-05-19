@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import {FiLogOut} from 'react-icons/fi';
+import {SignOut} from 'phosphor-react';
 
 interface Props {
   active: boolean,
@@ -72,7 +72,7 @@ export const IconLink = styled.div`
   margin-left: 15px;
 `;
 
-export const IconFiLogOut = styled(FiLogOut)`
+export const IconFiLogOut = styled(SignOut)`
   color: var(--textColor500);
   margin-left: 15px;
 `;

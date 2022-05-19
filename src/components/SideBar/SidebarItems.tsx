@@ -1,30 +1,30 @@
 import React from 'react';
-import { FiHome, FiUsers, FiCalendar, FiUser } from 'react-icons/fi';
+import { House, Users, CalendarPlus, User } from 'phosphor-react';
 
 const SidebarItems = [
   {
     id: 0,
     name: 'Página inicial',
     route: '/home',
-    iconName: <FiHome size={20} />,
+    iconName: <House size={22} weight='regular' />,
   },
   {
     id: 1,
     name: 'Assistidos',
     route: '/assisted',
-    iconName: <FiUsers size={20} />,
+    iconName: <Users size={22} weight='regular' />,
   },
   {
     id: 2,
     name: 'Eventos',
     route: '/events',
-    iconName: <FiCalendar size={20} />,
+    iconName: <CalendarPlus size={22} weight='regular' />,
   },
   {
     id: 3,
     name: 'Meu perfil',
     route: '/profile',
-    iconName: <FiUser size={20} />,
+    iconName: <User size={20} weight='regular' />,
   },
 ];
 

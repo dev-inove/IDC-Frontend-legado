@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
 import { CheckIcon } from '@radix-ui/react-icons';
 import { Formik, Form } from 'formik';
+import { EnvelopeSimple, LockSimple } from 'phosphor-react';
 import * as Yup from 'yup';
 
 import Logo from '~/assets/images/logo.svg';
@@ -69,13 +70,28 @@ function Login() {
                         <S.LabelInputAlert>{errors.email}</S.LabelInputAlert>
                       ) : null}
                     </S.ContainerTextInput>
-                    <S.Input
-                      type='email'
-                      placeholder='Ex: nome@gmail.com'
-                      value={email}
-                      onChange={handleChange('email')}
-                      onBlur={handleBlur('email')}
-                    />
+                    <S.ContentInput>
+                      <EnvelopeSimple
+                        size={22}
+                        weight='regular'
+                        style={{
+                          position: 'absolute',
+                          left: 10,
+                          top: 8,
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          color: '#999999',
+                        }}
+                      />
+                      <S.Input
+                        type='email'
+                        placeholder='Ex: nome@gmail.com'
+                        value={email}
+                        onChange={handleChange('email')}
+                        onBlur={handleBlur('email')}
+                      />
+                    </S.ContentInput>
                   </S.FormInput>
 
                   <S.FormInput>
@@ -85,13 +101,28 @@ function Login() {
                         <S.LabelInputAlert>{errors.password}</S.LabelInputAlert>
                       ) : null}
                     </S.ContainerTextInput>
-                    <S.Input
-                      type='password'
-                      placeholder='Ex: 123456'
-                      value={password}
-                      onChange={handleChange('password')}
-                      onBlur={handleBlur('password')}
-                    />
+                    <S.ContentInput>
+                      <LockSimple
+                        size={22}
+                        weight='regular'
+                        style={{
+                          position: 'absolute',
+                          left: 10,
+                          top: 8,
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          color: '#999999',
+                        }}
+                      />
+                      <S.Input
+                        type='password'
+                        placeholder='Ex: 123456'
+                        value={password}
+                        onChange={handleChange('password')}
+                        onBlur={handleBlur('password')}
+                      />
+                    </S.ContentInput>
                   </S.FormInput>
 
                   <S.RecoverPassword>

@@ -1,22 +1,28 @@
 import React from 'react';
-import { IconType } from 'react-icons';
 
 import * as S from './styles';
 
 interface PropsButtonSecondary {
   type: 'button' | 'submit' | 'reset' | undefined;
   name: string;
-  iconName: IconType | null;
+  iconName: any | null;
+  onClick?: () => void;
 }
 
-function ButtonSecondary({ type, name, iconName }: PropsButtonSecondary) {
+function ButtonSecondary({
+  type,
+  name,
+  iconName,
+  onClick,
+}: PropsButtonSecondary) {
   return (
-    <S.ButtonContainer type={type}>
+    <S.ButtonContainer type={type} onClick={onClick}>
       <S.ButtonContent>
         {iconName !== null
           ? React.createElement(iconName, {
               color: '#EF6D1F',
-              fontSize: 13,
+              fontSize: 14,
+              weight: 'bold',
             })
           : null}
         <S.TextButtonName>{name}</S.TextButtonName>

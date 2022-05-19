@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { IoMailOutline } from "react-icons/io5";
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
 
 export const Container = styled.div`
   display: flex;
   min-height: 100vh;
+  background-color: var(--background);
 
   @media(max-width: 950px) {
     flex-direction: column;
@@ -145,6 +145,14 @@ export const LabelInputAlert = styled.label`
   line-height: 24px;
 `;
 
+export const ContentInput = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+`;
+
 export const Input = styled.input`
   width: 400px;
   background-color: var(--backgroundGray);
@@ -152,6 +160,7 @@ export const Input = styled.input`
   padding: 10px;
   font-size: 16px;
   outline: none;
+  text-indent: 28px;
   border: 1px solid var(--borderInput);
   border-radius: 5px;
   transition: 0.3s;
@@ -175,11 +184,6 @@ export const WelcomeText = styled.h1`
   @media(max-width: 480px) {
     font-size: 35px;
   }
-`;
-
-export const IconEmail = styled(IoMailOutline)`
-  font-size: 25px;
-  display: flex;
 `;
 
 export const LabelRemember = styled.label`

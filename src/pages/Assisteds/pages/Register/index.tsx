@@ -1,7 +1,8 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
-import { FiPlus } from 'react-icons/fi';
+import { Plus } from 'phosphor-react';
+import { useNavigate } from 'react-router-dom';
 import { validateCPF } from 'validations-br';
 
 import InputLabel from '~/components/Inputs/InputLabel';
@@ -63,6 +64,8 @@ function Register() {
     RGEmissionDate: new Date(),
     CPF: '',
   };
+
+  const navigate = useNavigate();
 
   function onSubmit(values: any) {
     console.log(values);
@@ -214,12 +217,13 @@ function Register() {
                   type='button'
                   name='Cancelar'
                   iconName={null}
+                  onClick={() => navigate('/assisted')}
                 />
                 <div style={{ marginLeft: 30 }}>
                   <ButtonPrimary
                     type='submit'
                     name='Cadastrar'
-                    iconName={FiPlus}
+                    iconName={Plus}
                   />
                 </div>
               </S.ContentButtons>

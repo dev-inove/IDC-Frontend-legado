@@ -1,12 +1,11 @@
 import React from 'react';
-import { IconType } from 'react-icons';
 
 import * as S from './styles';
 
 interface PropsButtonPrimary {
   type: 'button' | 'submit' | 'reset' | undefined;
   name: string;
-  iconName: IconType | null;
+  iconName: any;
   onClick?: () => void;
 }
 
@@ -17,7 +16,8 @@ function ButtonPrimary({ type, name, iconName, onClick }: PropsButtonPrimary) {
         {iconName !== null
           ? React.createElement(iconName, {
               color: '#fff',
-              fontSize: 13,
+              fontSize: 14,
+              weight: 'bold',
             })
           : null}
         <S.TextButtonName>{name}</S.TextButtonName>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiPlus } from 'react-icons/fi';
+import { Plus } from 'phosphor-react';
 import { useNavigate } from 'react-router-dom';
 
 import ButtonPrimary from '~/components/ButtonPrimary';
@@ -18,7 +18,7 @@ function Assisted() {
       <ButtonPrimary
         type='button'
         name='Cadastrar'
-        iconName={FiPlus}
+        iconName={Plus}
         onClick={toRegister}
       />
     </div>
