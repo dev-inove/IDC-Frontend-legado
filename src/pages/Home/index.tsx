@@ -1,12 +1,13 @@
 import React from 'react';
 
+import HomeCards from '~/components/Cards/HomeCards';
+import * as S from './styles';
+
 function Home() {
   return (
-    <div style={{ marginLeft: '18rem' }}>
-      <h1>
-        Telahomeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-      </h1>
-    </div>
+    <S.HomeContainer>
+      <HomeCards />
+    </S.HomeContainer>
   );
 }
 

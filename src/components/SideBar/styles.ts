@@ -10,7 +10,8 @@ export const Container = styled.div`
   height: 100vh;
   position: fixed;
   display: flex;
-  box-shadow: inset 0 0 1em gold, 0 0 1em rgba(0, 0, 1, 0.123);
+  box-shadow: 0 0 1em rgba(0, 0, 1, 0.123);
+  overflow-y: auto;
 `;
 
 export const ContainerAside = styled.aside`
@@ -27,7 +28,8 @@ export const ContainerHeader = styled.header`
 `;
 
 export const ImgLogo = styled.img`
-  width: 12rem;
+  width: 171px;
+  height: 63px;
 `;
 
 export const ContainerLogo = styled.div`

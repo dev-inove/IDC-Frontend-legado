@@ -26,7 +26,7 @@ function InputLabelDate({ label, error, touched }: PropsInputLabelDate) {
             {...field}
             dateFormat='dd/MM/yyyy'
             selected={field.value || null}
-            onChange={(val) => {
+            onChange={(val: Date) => {
               setFieldValue(field.name, val);
             }}
           />

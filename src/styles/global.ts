@@ -35,7 +35,7 @@ const Global = createGlobalStyle`
   }
   body {
     height: 100vh;
-    background-color: var(--backgroundGray);
+    background-color: var(--backgroundGrayContent);
     -webkit-font-smoothing: antialiased;
   }
   body, input, text-area, button {
