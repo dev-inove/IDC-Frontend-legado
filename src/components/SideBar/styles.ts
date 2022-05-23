@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import {SignOut} from 'phosphor-react';
+import { SignOut } from 'phosphor-react';
 
 interface Props {
-  active: boolean,
+  active: boolean;
 }
 
 export const Container = styled.div`
@@ -11,7 +11,10 @@ export const Container = styled.div`
   position: fixed;
   display: flex;
   box-shadow: 0 0 1em rgba(0, 0, 1, 0.123);
-  overflow-y: auto;
+  overflow-y: hidden;
+  :hover {
+    overflow-y: auto;
+  }
 `;
 
 export const ContainerAside = styled.aside`
@@ -48,7 +51,7 @@ export const NavLinkItens = styled.div<Props>`
   border-radius: 5px;
   align-items: center;
   transition: all 0.25s ease-in-out;
-  background-color: ${props => props.active ? "#F4F5F5" : ""};
+  background-color: ${(props) => (props.active ? '#F4F5F5' : '')};
 
   &:hover {
     background-color: var(--navigationHoverSideBar);
@@ -98,11 +101,3 @@ export const ContainerBottom = styled.footer`
   height: 100%;
   justify-content: flex-end;
 `;
-
-
-
-
-
-
-
-

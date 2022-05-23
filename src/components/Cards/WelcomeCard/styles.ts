@@ -5,17 +5,17 @@ export const ContainerCardWelcome = styled.div`
   display: flex;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.06);
-  height: 13rem;
+  height: 11rem;
   min-width: 484px;
   background-color: #fff;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
   @media (max-width: 1366px) {
-    height: 12rem;
+    height: 10rem;
   }
   @media (max-width: 1080px) {
-    height: 11rem;
+    height: 9rem;
   }
 `;
 
@@ -65,15 +65,22 @@ export const CardWelcomeHeaderText = styled.h1`
     width: 14.5rem;
     font-size: 2.5rem;
   }
-  @media (max-width: 1080px) {
-    width: 11.5rem;
+  @media (max-width: 1280px) {
+    width: 13.5rem;
+    font-size: 2.25rem;
+  }
+  @media (max-width: 1150px) {
     font-size: 2rem;
   }
-  @media (max-width: 846px) {
+  @media (max-width: 1080px) {
+    width: 11.5rem;
     font-size: 1.9rem;
   }
+  @media (max-width: 846px) {
+    font-size: 1.8rem;
+  }
   @media (max-width: 720px) {
-    font-size: 1.95rem;
+    font-size: 1.7rem;
   }
 `;
 
