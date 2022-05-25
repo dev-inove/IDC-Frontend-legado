@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import * as Select from '@radix-ui/react-select';
 
 export const Container = styled.div`
+  width: calc(100vw - 18rem);
+  padding-right: 50px;
 `;
 
 export const Welcome = styled.h1`
@@ -12,13 +14,27 @@ export const Welcome = styled.h1`
   color: var(--textColor500);
 `;
 
-export const WelcomeParagraph = styled.p`
-  margin-top: 5px;
-  margin-bottom: 40px;
-  font-size: 18px;
+export const MenuButton = styled.div`
+  width: 100%;
+  border-bottom: 1.5px solid var(--textColor200);
+  margin-bottom: 30px;
+`;
+
+export const ButtonParagraph = styled.button`
+  font-size: 21px;
   font-weight: 400;
   line-height: 31px;
-  color: var(--textColor300);
+  color: var(--textColor200);
+  display: inline;
+  padding: 15px 50px;
+  border: none;
+  background-color: var(--backgroundGray);
+
+  &:hover {
+    color: var(--textColor500);
+    transition: 10ms;
+    border-bottom: 1.5px solid var(--textColor500);
+}
 `;
 
 export const FormLogin = styled.div`
