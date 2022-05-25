@@ -1,17 +1,24 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import * as Select from '@radix-ui/react-select';
 
 export const Container = styled.div`
   width: calc(100vw - 18rem);
   padding-right: 50px;
+  font-family: Poppins;
 `;
 
 export const Welcome = styled.h1`
-  padding-top: 20px;
   font-size: 30px;
   font-weight: 600;
   line-height: 47px;
   color: var(--textColor500);
+`;
+
+export const Header = styled.header`
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
 `;
 
 export const MenuButton = styled.div`
@@ -26,15 +33,15 @@ export const ButtonParagraph = styled.button`
   line-height: 31px;
   color: var(--textColor200);
   display: inline;
-  padding: 15px 50px;
+  padding: 10px 50px;
   border: none;
-  background-color: var(--backgroundGray);
+  background-color: var(--backgroundGrayContent);
 
   &:hover {
     color: var(--textColor500);
     transition: 10ms;
     border-bottom: 1.5px solid var(--textColor500);
-}
+  }
 `;
 
 export const FormLogin = styled.div`
@@ -96,6 +103,25 @@ export const ContentButtons = styled.div`
 `;
 
 
-
-
-
+export const NavLink = styled(Link)`
+  text-decoration: none;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--textColor200);
+  border-radius: 5px;
+  height: 35px;
+  width: 35px;
+  
+`;
+  
+  
+export const IconLink = styled.div`
+  color: var(--textColor300);
+  font-size: 20px;
+  &:hover {
+    color: var(--textColor500);
+    transition: 10ms;
+  }
+`;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
-import { Plus } from 'phosphor-react';
+import { Plus , ArrowLeft } from 'phosphor-react';
 import { useNavigate } from 'react-router-dom';
 import { validateCPF } from 'validations-br';
 
@@ -15,6 +15,10 @@ import InputDegreeDisability from '~/components/Inputs/InputDegreeDisability';
 import ButtonPrimary from '~/components/ButtonPrimary';
 import ButtonSecondary from '~/components/ButtonSecondary';
 import 'react-datepicker/dist/react-datepicker.css';
+// Importando icones do react-icons
+import {  faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// Importando styles e atribuindo prefixo "S"
 import * as S from './styles';
 
 const schema = Yup.object().shape({
@@ -73,7 +77,12 @@ function Register() {
 
   return (
     <S.Container style={{ marginLeft: '18rem' }}>
-      <S.Welcome>Detalhes do assistido</S.Welcome>
+      <S.Header>
+        <S.NavLink to='/assisted' >
+          <S.IconLink><FontAwesomeIcon icon={faArrowLeft} /></S.IconLink>
+        </S.NavLink>
+        <S.Welcome>Detalhes do assistido</S.Welcome>
+      </S.Header>
      
       <S.MenuButton>
         <S.ButtonParagraph>Dados Pessoais</S.ButtonParagraph>
@@ -81,6 +90,9 @@ function Register() {
         <S.ButtonParagraph>Familiares</S.ButtonParagraph>
         <S.ButtonParagraph>Imóveis</S.ButtonParagraph>
       </S.MenuButton>
+
+
+      {/* Verificar possibilidade de utilizar React Tabs para não recarregar a pag completa */ }
 
       <S.FormLogin>
         <Formik
