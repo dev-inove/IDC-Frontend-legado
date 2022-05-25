@@ -73,7 +73,7 @@ function Register() {
 
   return (
     <S.Container style={{ marginLeft: '18rem' }}>
-      <S.Welcome>Cadastrar assistido</S.Welcome>
+      <S.Welcome>Detalhes do assistido</S.Welcome>
      
       <S.MenuButton>
         <S.ButtonParagraph>Dados Pessoais</S.ButtonParagraph>
