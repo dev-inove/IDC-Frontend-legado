@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import * as Select from '@radix-ui/react-select';
 
 export const Container = styled.div`
@@ -19,30 +20,42 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
   padding-top: 30px;
+  margin-bottom: 30px;
 `;
 
-export const MenuButton = styled.div`
+export const CustomTabList = styled(TabList)`
   width: 100%;
   border-bottom: 1.5px solid var(--textColor200);
   margin-bottom: 30px;
 `;
 
-export const ButtonParagraph = styled.button`
+export const CustomTab = styled(Tab)`
+  text-decoration: none;
   font-size: 21px;
   font-weight: 400;
   line-height: 31px;
   color: var(--textColor200);
   display: inline;
-  padding: 10px 50px;
-  border: none;
+  padding: 0 50px;
   background-color: var(--backgroundGrayContent);
+  
 
-  &:hover {
+  &:focus{ 
     color: var(--textColor500);
     transition: 10ms;
     border-bottom: 1.5px solid var(--textColor500);
   }
+  &:hover {
+    transition: 10ms;
+    border-bottom: 1.5px solid var(--textColor200);
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
 `;
+
 
 export const FormLogin = styled.div`
   width: 30rem;
