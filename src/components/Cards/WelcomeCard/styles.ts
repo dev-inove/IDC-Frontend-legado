@@ -14,6 +14,9 @@ export const ContainerCardWelcome = styled.div`
   @media (max-width: 1366px) {
     height: 10rem;
   }
+  @media (max-width: 1280px) {
+    height: 9.5rem;
+  }
   @media (max-width: 1080px) {
     height: 9rem;
   }
@@ -56,7 +59,7 @@ export const CardWelcomeImage = styled.img`
 export const CardWelcomeHeaderText = styled.h1`
   font-family: 'Poppins';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 600px;
   font-size: 3rem;
   width: 17.5rem;
   letter-spacing: 0.01em;
@@ -88,7 +91,7 @@ export const CardWelcomeHeaderText = styled.h1`
 export const CardWelcomeText = styled.p`
   font-family: 'Poppins';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 400px;
   font-size: 1.5rem;
   line-height: auto;
   letter-spacing: 0.01em;

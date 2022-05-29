@@ -82,27 +82,15 @@ export const InfoCard = styled.div`
   background-color: #ffffff;
   justify-content: space-evenly;
   align-items: center;
-  @media (max-width: 1336px) {
-    min-width: 460px;
+  @media (max-width: 1366px) {
+    min-width: auto;
     height: 9rem;
-    width: 30%;
   }
   @media (max-width: 1280px) {
-    min-width: 444px;
     height: 8rem;
   }
-  @media (max-width: 1250px) {
-    min-width: 424px;
-  }
-  @media (max-width: 1200px) {
-    min-width: 404px;
-  }
   @media (max-width: 1150px) {
-    min-width: 384px;
     height: 7rem;
-  }
-  @media (max-width: 1125px) {
-    min-width: 359px;
   }
   @media (max-width: 1080px) {
     width: 100%;
@@ -161,9 +149,6 @@ export const InforCardImage = styled.img`
     width: 90%;
   }
   @media (max-width: 1280px) {
-    width: 75%;
-  }
-  @media (max-width: 1080px) {
     width: 75%;
   }
 `;
