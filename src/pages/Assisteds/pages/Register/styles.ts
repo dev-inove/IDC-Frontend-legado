@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { Tab, TabList } from 'react-tabs';
 import * as Select from '@radix-ui/react-select';
 
 export const Container = styled.div`
@@ -29,6 +29,12 @@ export const CustomTabList = styled(TabList)`
   margin-bottom: 30px;
 `;
 
+export const MudarCor = styled.button`
+  color: var(--textColor500);
+  transition: 10ms;
+  border-bottom: 1.5px solid var(--textColor500);
+`
+
 export const CustomTab = styled(Tab)`
   text-decoration: none;
   font-size: 21px;
@@ -38,13 +44,13 @@ export const CustomTab = styled(Tab)`
   display: inline;
   padding: 0 50px;
   background-color: var(--backgroundGrayContent);
-  
 
-  &:focus{ 
-    color: var(--textColor500);
-    transition: 10ms;
-    border-bottom: 1.5px solid var(--textColor500);
-  }
+
+ // &:focus{
+   // color: var(--textColor500);
+    //transition: 10ms;
+    //border-bottom: 1.5px solid var(--textColor500);
+ // }
   &:hover {
     transition: 10ms;
     border-bottom: 1.5px solid var(--textColor200);
@@ -52,6 +58,12 @@ export const CustomTab = styled(Tab)`
 
   &:focus-visible {
     outline: none;
+  }
+
+  .ButtonActivo {
+    color: var(--textColor500);
+    transition: 10ms;
+    border-bottom: 1.5px solid var(--textColor500);
   }
 
 `;
@@ -126,10 +138,10 @@ export const NavLink = styled(Link)`
   border-radius: 5px;
   height: 35px;
   width: 35px;
-  
+
 `;
-  
-  
+
+
 export const IconLink = styled.div`
   color: var(--textColor300);
   font-size: 20px;
