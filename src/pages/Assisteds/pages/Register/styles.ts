@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Tab, TabList } from 'react-tabs';
 import * as Select from '@radix-ui/react-select';
@@ -23,10 +23,16 @@ export const Header = styled.header`
   margin-bottom: 30px;
 `;
 
-export const CustomTabList = styled(TabList)`
+export const CustomTabList = styled(TabList).attrs(props=>({className:props.className,}))`
   width: 100%;
   border-bottom: 1.5px solid var(--textColor200);
   margin-bottom: 30px;
+
+  & .activeButton{
+    color: var(--textColor500);
+    transition: 10ms;
+    border-bottom: 1.5px solid var(--textColor500);
+  }
 `;
 
 export const MudarCor = styled.button`
@@ -45,12 +51,6 @@ export const CustomTab = styled(Tab)`
   padding: 0 50px;
   background-color: var(--backgroundGrayContent);
 
-
- // &:focus{
-   // color: var(--textColor500);
-    //transition: 10ms;
-    //border-bottom: 1.5px solid var(--textColor500);
- // }
   &:hover {
     transition: 10ms;
     border-bottom: 1.5px solid var(--textColor200);
@@ -60,14 +60,11 @@ export const CustomTab = styled(Tab)`
     outline: none;
   }
 
-  .ButtonActivo {
-    color: var(--textColor500);
-    transition: 10ms;
-    border-bottom: 1.5px solid var(--textColor500);
-  }
-
 `;
 
+
+export const activeButton = styled(Tab).attrs(props=>({className:props.className,}))`
+`;
 
 export const FormLogin = styled.div`
   width: 30rem;
