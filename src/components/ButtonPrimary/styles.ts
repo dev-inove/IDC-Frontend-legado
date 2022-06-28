@@ -3,10 +3,8 @@ import styled from 'styled-components';
 export const ButtonContainer = styled.button`
   min-width: 8rem;
   height: 35px;
-  margin-top: 10px;
-  margin-bottom: 40px;
   border-radius: 5px;
-  padding: 0 12px;
+  //padding: 0 12px;
   border: none;
   align-items: center;
   justify-content: center;
@@ -28,6 +26,7 @@ export const TextButtonName = styled.h4`
   font-weight: 500;
   font-size: 14px;
   margin-left: 5px;
+  margin-bottom: 0px;
   align-items: center;
   justify-content: center;
   color: var(--background);

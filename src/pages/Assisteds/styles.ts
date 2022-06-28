@@ -1,8 +1,66 @@
 import styled from 'styled-components';
 import * as Select from '@radix-ui/react-select';
 
-export const Container = styled.div`
+export const Container = styled.div``;
+
+export const AssistedsContainer = styled.div`
+  background-color: var(--backgroundGrayContent);
+  height: 100vh;
+  overflow: hidden;
+  overflow-x: hidden;
+  margin-left: 16rem;
+  min-width: 582.55px;
+  padding: 35px 45px;
+  :hover {
+    overflow-x: auto;
+    overflow-y: auto;
+  }
 `;
+
+export const FilterFormContainer = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const AssistedInputContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+`;
+
+export const AssistedFiltersContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  //justify-content: none;
+  margin-bottom: 2rem;
+`;
+
+
+export const InputCpf = styled.input`
+  width: 30%;
+  height: 2.5rem;
+`;
+
+export const InputAge = styled.select`
+  width: 15%;
+  height: 2.5rem;
+  margin-right: 2rem;
+`;
+export const InputSex = styled.select`
+  width: 15%;
+  height: 2.5rem;
+  margin-right: 2rem;
+`;
+export const InputVisualDeficienceDregreeLevel = styled.select`
+  width: 30%;
+  height: 2.5rem;
+`;
+
+// Revisar essa parte do código!!!!!!!
 
 export const Welcome = styled.h1`
   margin-top: 20px;
@@ -78,8 +136,3 @@ export const ContentButtons = styled.div`
   display: flex;
   justify-content: end;
 `;
-
-
-
-
-
