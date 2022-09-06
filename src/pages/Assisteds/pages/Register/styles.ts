@@ -14,6 +14,7 @@ export const Welcome = styled.h1`
   font-weight: 600;
   line-height: 47px;
   color: var(--textColor500);
+  cursor: pointer;
 `;
 
 export const Header = styled.header`
@@ -50,6 +51,7 @@ export const CustomTab = styled(Tab)`
   display: inline;
   padding: 0 50px;
   background-color: var(--backgroundGrayContent);
+  cursor: pointer;
 
   &:hover {
     transition: 10ms;
