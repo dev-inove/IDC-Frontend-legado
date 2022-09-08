@@ -1,0 +1,13 @@
+{
+  "assisteds": [
+    {
+      "id": 0,
+      "name": "Juan Pimentel",
+      "birthDate": "05/10/2001",
+      "age": 65,
+      "sex": "Masculino",
+      "disabilityDegree": "Nenhuma Deficiência",
+      "cpf":"123.456.789-99"
+    }
+  ]
+}
