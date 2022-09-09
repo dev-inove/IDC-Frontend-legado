@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import * as Select from '@radix-ui/react-select';
 
 export const Container = styled.div`
+  width: calc(100vw - 18rem);
 `;
 
 export const Welcome = styled.h1`
