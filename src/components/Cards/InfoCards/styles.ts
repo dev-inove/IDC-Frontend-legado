@@ -4,7 +4,7 @@ export const InfoHeaderText = styled.h1`
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
-  font-size: 2.9rem;
+  font-size: 2rem;
   line-height: 47px;
   margin-bottom: 25px;
   color: #323232;

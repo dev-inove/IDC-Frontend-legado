@@ -2,6 +2,7 @@ import React from 'react';
 
 import WelcomeCard from '../WelcomeCard';
 import Infocards from '../InfoCards';
+import RegisteredCard from '../RegisteredCard';
 import * as S from './styles';
 
 function HomeCards() {
@@ -9,6 +10,7 @@ function HomeCards() {
     <S.HomeCardsContainer>
       <WelcomeCard />
       <Infocards />
+      <RegisteredCard />
     </S.HomeCardsContainer>
   );
 }
