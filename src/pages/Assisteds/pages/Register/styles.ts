@@ -1,71 +1,24 @@
-import styled, { css } from 'styled-components';
-import { Link } from 'react-router-dom';
-import { Tab, TabList } from 'react-tabs';
+import styled from 'styled-components';
 import * as Select from '@radix-ui/react-select';
 
 export const Container = styled.div`
-  width: calc(100vw - 18rem);
-  padding-right: 50px;
-  font-family: Poppins;
 `;
 
 export const Welcome = styled.h1`
+  padding-top: 20px;
   font-size: 30px;
   font-weight: 600;
   line-height: 47px;
   color: var(--textColor500);
-  cursor: pointer;
 `;
 
-export const Header = styled.header`
-  display: flex;
-  align-items: center;
-  padding-top: 30px;
-  margin-bottom: 30px;
-`;
-
-export const CustomTabList = styled(TabList).attrs(props=>({className:props.className,}))`
-  width: 100%;
-  border-bottom: 1.5px solid var(--textColor200);
-  margin-bottom: 30px;
-
-  & .activeButton{
-    color: var(--textColor500);
-    transition: 10ms;
-    border-bottom: 1.5px solid var(--textColor500);
-  }
-`;
-
-export const MudarCor = styled.button`
-  color: var(--textColor500);
-  transition: 10ms;
-  border-bottom: 1.5px solid var(--textColor500);
-`
-
-export const CustomTab = styled(Tab)`
-  text-decoration: none;
-  font-size: 21px;
+export const WelcomeParagraph = styled.p`
+  margin-top: 5px;
+  margin-bottom: 40px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 31px;
-  color: var(--textColor200);
-  display: inline;
-  padding: 0 50px;
-  background-color: var(--backgroundGrayContent);
-  cursor: pointer;
-
-  &:hover {
-    transition: 10ms;
-    border-bottom: 1.5px solid var(--textColor200);
-  }
-
-  &:focus-visible {
-    outline: none;
-  }
-
-`;
-
-
-export const activeButton = styled(Tab).attrs(props=>({className:props.className,}))`
+  color: var(--textColor300);
 `;
 
 export const FormLogin = styled.div`
@@ -127,25 +80,6 @@ export const ContentButtons = styled.div`
 `;
 
 
-export const NavLink = styled(Link)`
-  text-decoration: none;
-  margin-right: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1.5px solid var(--textColor200);
-  border-radius: 5px;
-  height: 35px;
-  width: 35px;
-
-`;
 
 
-export const IconLink = styled.div`
-  color: var(--textColor300);
-  font-size: 20px;
-  &:hover {
-    color: var(--textColor500);
-    transition: 10ms;
-  }
-`;
+

@@ -5,6 +5,7 @@ import Login from '~/pages/Login/index';
 import Home from '~/pages/Home/index';
 import Assisted from '~/pages/Assisteds/index';
 import AssistedRegister from '~/pages/Assisteds/pages/Register';
+import AssistedDetails from '~/pages/Assisteds/pages/Details';
 import Events from '~/pages/Events/index';
 import Profile from '~/pages/Profile/index';
 import Sidebar from '~/components/SideBar/index';
@@ -19,6 +20,7 @@ const routes = () => (
       <Route path='/home' element={<Home />} />
       <Route path='/assisted' element={<Assisted />} />
       <Route path='/assistedRegister' element={<AssistedRegister />} />
+      <Route path='/assisted/:id' element={<AssistedDetails />} />
       <Route path='/events' element={<Events />} />
       <Route path='/profile' element={<Profile />} />
     </Routes>
