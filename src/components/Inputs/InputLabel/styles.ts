@@ -53,7 +53,7 @@ export const Input = styled.input<Props>`
     color: var(--textColor100);
   }
 
-  @media(max-width: 500px) {
+  @media (max-width: 500px) {
     width: 100%;
   }
 `;
