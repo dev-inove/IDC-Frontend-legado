@@ -8,9 +8,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
+    "@mui/material": "^5.10.7",
+    "@mui/styled-engine-sc": "^5.10.6",
+    "@mui/x-data-grid": "^5.17.5",
     "@radix-ui/react-checkbox": "^0.1.5",
     "@radix-ui/react-icons": "^1.1.1",
     "@radix-ui/react-select": "^0.1.1",
@@ -23,7 +28,7 @@
     "react-phone-input-2": "^2.15.0",
     "react-router-dom": "^6.3.0",
     "react-tabs": "^5.1.0",
-    "styled-components": "^5.3.5",
+    "styled-components": "^5.3.6",
     "validations-br": "^1.2.0",
     "yup": "^0.32.11"
   },
