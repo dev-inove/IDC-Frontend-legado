@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import * as S from './styles';
 import AssistedTable from '~/components/Tables/AssistedTable';
+import ActivitiesTable from '~/components/Tables/ActivitiesTable';
 
 function RegisteredCard() {
     const [isActive, setIsActive] = useState(false);
@@ -28,7 +29,8 @@ function RegisteredCard() {
                     Atividades
                 </S.RegisteredButton>
             </S.RegisteredNavBar>
-            <AssistedTable />
+            { isActive === true && <ActivitiesTable /> }
+            { isActive === false && <AssistedTable /> }
         </S.ContainerRegisteredCard>
     );
 }

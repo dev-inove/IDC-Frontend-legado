@@ -5,8 +5,8 @@ import { LinearProgress } from '@mui/material';
 const rows: GridRowsProp = [];
 
 const columns: GridColDef[] = [
-    { field: 'id', headerName: 'ID', width: 10 },
-    { field: 'activities', headerName: 'Nome da atividade, ação ou projeto', width: 90 },
+    { field: 'id', headerName: 'ID', width: 100 },
+    { field: 'activities', headerName: 'Nome da atividade, ação ou projeto', width: 1450 },
 ];
 
 function AssistedTable() {
