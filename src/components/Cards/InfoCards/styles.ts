@@ -6,7 +6,7 @@ export const InfoHeaderText = styled.h1`
   font-weight: 600;
   font-size: 2rem;
   line-height: 47px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   color: #323232;
   min-width: 165px;
   @media (max-width: 1366px) {

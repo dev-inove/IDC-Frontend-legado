@@ -11,7 +11,7 @@ font-style: normal;
 font-weight: 600;
 font-size: 2rem;
 line-height: 47px;
-margin-top: 25px;
+margin-top: 15px;
 color: #323232;
   @media (max-width: 1366px) {
     font-size: 2.4rem;
@@ -38,7 +38,7 @@ color: #323232;
   flex-direction: row;
   gap: 75px;
   justify-content: flex-start;
-  margin-top: 25px;`
+  margin-top: 15px;`
 
   export const RegisteredButton = styled.button`
   background: none;
@@ -51,3 +51,14 @@ color: #323232;
   font-weight: 400;
   padding: 10px 0;
   width: 110px;`
+
+  export const seeMore = styled.span`
+  color: var(--primaryColor);
+  cursor: pointer;
+  font-family: 'Poppins';
+  font-size: 21px;
+  font-weight: 500;
+  padding-top: 20px;
+  &:hover {
+    color: var(--primaryColorHover);
+  }`;

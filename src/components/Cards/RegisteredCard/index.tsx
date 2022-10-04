@@ -31,6 +31,7 @@ function RegisteredCard() {
             </S.RegisteredNavBar>
             { isActive === true && <ActivitiesTable /> }
             { isActive === false && <AssistedTable /> }
+            <S.seeMore>Ver mais</S.seeMore>
         </S.ContainerRegisteredCard>
     );
 }
