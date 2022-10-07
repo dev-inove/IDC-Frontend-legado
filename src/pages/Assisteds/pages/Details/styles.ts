@@ -24,12 +24,14 @@ export const Header = styled.header`
   margin-bottom: 30px;
 `;
 
-export const CustomTabList = styled(TabList).attrs(props=>({className:props.className,}))`
+export const CustomTabList = styled(TabList).attrs((props) => ({
+  className: props.className,
+}))`
   width: 100%;
   border-bottom: 1.5px solid var(--textColor200);
   margin-bottom: 30px;
 
-  & .activeButton{
+  & .activeButton {
     color: var(--textColor500);
     transition: 10ms;
     border-bottom: 1.5px solid var(--textColor500);
@@ -40,7 +42,7 @@ export const MudarCor = styled.button`
   color: var(--textColor500);
   transition: 10ms;
   border-bottom: 1.5px solid var(--textColor500);
-`
+`;
 
 export const CustomTab = styled(Tab)`
   text-decoration: none;
@@ -61,15 +63,33 @@ export const CustomTab = styled(Tab)`
   &:focus-visible {
     outline: none;
   }
-
 `;
 
-
-export const activeButton = styled(Tab).attrs(props=>({className:props.className,}))`
-`;
+export const activeButton = styled(Tab).attrs((props) => ({
+  className: props.className,
+}))``;
 
 export const FormLogin = styled.div`
   width: 30rem;
+`;
+
+export const RelativesContainer = styled.div`
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+`;
+
+export const Text = styled.p`
+  color: var(--textColor300);
+  text-align: center;
+  margin: 20px 0;
+
+  & + p {
+    margin-top: 10px;
+  }
 `;
 
 export const StyledTrigger = styled(Select.SelectTrigger)`
@@ -126,7 +146,6 @@ export const ContentButtons = styled.div`
   justify-content: end;
 `;
 
-
 export const NavLink = styled(Link)`
   text-decoration: none;
   margin-right: 15px;
@@ -137,9 +156,7 @@ export const NavLink = styled(Link)`
   border-radius: 5px;
   height: 35px;
   width: 35px;
-
 `;
-
 
 export const IconLink = styled.div`
   color: var(--textColor300);
