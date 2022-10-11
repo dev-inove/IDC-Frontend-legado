@@ -3,6 +3,7 @@ import * as Yup from 'yup';
 import { validateCPF } from 'validations-br';
 import { useNavigate } from 'react-router-dom';
 import { Formik, Form } from 'formik';
+import { PencilSimpleLine, TrashSimple } from 'phosphor-react';
 
 // Import componentes
 import InputLabel from '~/components/Inputs/InputLabel';
@@ -14,10 +15,8 @@ import InputLabelPhone from '~/components/Inputs/InputLabelPhone';
 import InputLabelRGEmissionDate from '~/components/Inputs/InputLabelRGEmissionDate';
 import ButtonPrimary from '~/components/ButtonPrimary';
 import ButtonSecondary from '~/components/ButtonSecondary';
-
 // Import estilos e icones
 import * as S from '../styles';
-import { Plus, TrashSimple } from 'phosphor-react';
 
 const schema = Yup.object().shape({
   name: Yup.string().required('O nome é obrigatório'),
@@ -216,7 +215,7 @@ function PersonalData() {
                 onClick={() => navigate('/assisted')}
               />
               <div style={{ marginLeft: 30 }}>
-                <ButtonPrimary type='submit' name='Cadastrar' iconName={Plus} />
+                <ButtonPrimary type='submit' name='Concluir Edição' iconName={PencilSimpleLine} />
               </div>
             </S.ContentButtons>
           </Form>

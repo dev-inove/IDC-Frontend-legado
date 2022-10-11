@@ -3,16 +3,16 @@ import * as Yup from 'yup';
 import { validateCep, validateUF } from 'validations-br';
 import { useNavigate } from 'react-router-dom';
 import { Formik, Form } from 'formik';
+import { TrashSimple, PencilSimpleLine } from 'phosphor-react';
 
 // Import componentes
 import ButtonPrimary from '~/components/ButtonPrimary';
 import ButtonSecondary from '~/components/ButtonSecondary';
 import InputLabel from '~/components/Inputs/InputLabel';
-
 // Import estilos e icones
 import * as S from '../styles';
 import { ContentRowLabels } from '~/pages/Assisteds/styles';
-import { TrashSimple, PencilSimpleLine } from 'phosphor-react';
+
 
 const schema = Yup.object().shape({
   cep: Yup.string()
@@ -143,7 +143,7 @@ function Adress() {
               <div style={{ marginLeft: 30 }}>
                 <ButtonPrimary
                   type='submit'
-                  name='Editar conteúdo'
+                  name='Concluir Edição'
                   iconName={PencilSimpleLine}
                 />
               </div>
