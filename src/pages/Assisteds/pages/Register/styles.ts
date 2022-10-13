@@ -2,8 +2,22 @@ import styled from 'styled-components';
 import * as Select from '@radix-ui/react-select';
 
 export const Container = styled.div`
+  width: calc(100vw - 18rem);
 `;
+export const DivForm = styled.div`
+  margin-left: 18rem;
+  flex-direction: column;
+`;
+export const ImagePerson = styled.img`
+position: absolute;
 
+  height: 419px;
+  width: 419px;
+  left: 880px;
+  top: 100px;
+  border-radius: 0px;
+
+`;
 export const Welcome = styled.h1`
   padding-top: 20px;
   font-size: 30px;

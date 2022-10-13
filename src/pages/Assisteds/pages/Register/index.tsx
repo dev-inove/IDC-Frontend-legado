@@ -17,6 +17,8 @@ import ButtonSecondary from '~/components/ButtonSecondary';
 import 'react-datepicker/dist/react-datepicker.css';
 import * as S from './styles';
 
+import Person from '~/assets/images/person.svg';
+
 const schema = Yup.object().shape({
   name: Yup.string().required('O nome é obrigatório'),
   socialName: Yup.string().min(2, 'Digite pelo menos 2 caracteres'),
@@ -72,7 +74,7 @@ function Register() {
   }
 
   return (
-    <div style={{ marginLeft: '18rem' }}>
+    <S.DivForm>
       <S.Welcome>Cadastrar assistido</S.Welcome>
       <S.WelcomeParagraph>
         Preencha todos os campos abaixo para cadastrar uma pessoa.
@@ -230,8 +232,9 @@ function Register() {
             </Form>
           )}
         </Formik>
+        <S.ImagePerson src={Person}/>
       </S.FormLogin>
-    </div>
+    </S.DivForm>
   );
 }
 
