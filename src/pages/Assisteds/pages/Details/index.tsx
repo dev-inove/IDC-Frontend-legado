@@ -11,6 +11,7 @@ import * as S from './styles';
 import 'react-tabs/style/react-tabs.css';
 import Adress from './Adress';
 import PersonalData from './PersonalData';
+import Relatives from './Relatives';
 
 function Detail() {
   // Auxiliares de estilização das Tabs
@@ -59,7 +60,9 @@ function Detail() {
           <Adress />
         </TabPanel>
         {/* Aba de Familiares */}
-        <TabPanel>Familiares</TabPanel>
+        <TabPanel>
+          <Relatives />
+        </TabPanel>
 
         {/* Aba de Imóveis */}
         <TabPanel>Imóveis</TabPanel>
