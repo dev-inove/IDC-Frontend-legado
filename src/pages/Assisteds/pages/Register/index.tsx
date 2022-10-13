@@ -74,6 +74,7 @@ function Register() {
   }
 
   return (
+    //Div 
     <S.DivForm>
       <S.Welcome>Cadastrar assistido</S.Welcome>
       <S.WelcomeParagraph>
