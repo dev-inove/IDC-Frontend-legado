@@ -13,7 +13,7 @@ function Assisted() {
   }
 
   return (
-    <div style={{ marginLeft: '18rem' }}>
+    <S.Container>
       <h1>Assisted</h1>
       <ButtonPrimary
         type='button'
@@ -21,7 +21,7 @@ function Assisted() {
         iconName={Plus}
         onClick={toRegister}
       />
-    </div>
+    </S.Container>
   );
 }
 

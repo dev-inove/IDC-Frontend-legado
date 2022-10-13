@@ -7,9 +7,10 @@ interface Props {
 }
 
 export const Container = styled.div`
-  height: 100vh;
+  height: 100%;
   position: fixed;
   display: flex;
+  background-color: #fff;
   box-shadow: 0 0 1em rgba(0, 0, 1, 0.123);
   overflow-y: hidden;
   :hover {
@@ -20,7 +21,6 @@ export const Container = styled.div`
 export const ContainerAside = styled.aside`
   width: 16rem;
   height: 100%;
-  background: #fff;
   display: flex;
   flex-direction: column;
 `;

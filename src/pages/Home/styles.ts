@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
+// comentário pra enviar pro remote
 export const HomeContainer = styled.div`
   background-color: var(--backgroundGrayContent);
-  height: 100vh;
+  height: 100%;
   margin-left: 16rem;
   overflow: hidden;
   overflow-x: hidden;
