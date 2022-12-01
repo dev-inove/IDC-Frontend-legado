@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import * as Select from '@radix-ui/react-select';
 
-export const Container = styled.div`
+export const AssistedsContainer = styled.div`
   background-color: var(--backgroundGrayContent);
   height: 100%;
   margin-left: 16rem;

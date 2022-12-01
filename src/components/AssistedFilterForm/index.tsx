@@ -5,8 +5,12 @@ import { useNavigate } from 'react-router-dom';
 import ButtonPrimary from '~/components/ButtonPrimary';
 import * as S from './styles';
 
+interface externStates{
+  filteredAssisteds:{}[];
+  setFilteredAssisteds:Function;
+}
 
-export default function AssistedFilterForm(filteredAssisteds:[],setFilteredAssisteds:Function) {
+export default function AssistedFilterForm({filteredAssisteds,setFilteredAssisteds}:externStates) {
     
 
     const navigate = useNavigate();
