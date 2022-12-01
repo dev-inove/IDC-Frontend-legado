@@ -6,7 +6,6 @@ export const ButtonContainer = styled.button`
   margin-top: 10px;
   margin-bottom: 40px;
   border-radius: 5px;
-  padding: 0 12px;
   border: 1px solid var(--borderInput);
   align-items: center;
   justify-content: center;
@@ -29,7 +28,6 @@ export const TextButtonName = styled.h4`
   font-weight: 500;
   font-size: 14px;
   margin-left: 5px;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 0px;
   color: var(--primaryColor);
 `;

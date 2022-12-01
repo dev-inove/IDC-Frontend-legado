@@ -3,8 +3,9 @@ import styled from 'styled-components';
 export const ButtonContainer = styled.button`
   min-width: 8rem;
   height: 35px;
+  margin-top: 10px;
+  margin-bottom: 40px;
   border-radius: 5px;
-  //padding: 0 12px;
   border: none;
   align-items: center;
   justify-content: center;
