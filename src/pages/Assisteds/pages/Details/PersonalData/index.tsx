@@ -31,7 +31,7 @@ const schema = Yup.object().shape({
   ),
   phone: Yup.number()
     .integer('Número invalido')
-    .min(9, 'teste')
+    .min(9, 'O formato do número é inválido')
     .required('O número é obrigatório'),
   email: Yup.string()
     .email('Email inválido')
@@ -52,7 +52,7 @@ function PersonalData() {
   const assistedInfo = {
     name: '',
     socialName: '',
-    date: new Date(),
+    date: '',
     civilState: '',
     sex: '',
     nationality: '',
@@ -62,7 +62,7 @@ function PersonalData() {
     email: '',
     RG: '',
     RGDispatcher: '',
-    RGEmissionDate: new Date(),
+    RGEmissionDate: '',
     CPF: '',
   };
 
@@ -112,9 +112,10 @@ function PersonalData() {
 
             <InputLabelDate
               label='Data de nascimento'
-              error={JSON.stringify(errors.date)}
-              touched={JSON.stringify(touched.date)}
+              error={errors.date}
+              touched={touched.date}
               isHalf={1}
+              placeholder='dd/mm/aaaa'
             />
 
             <S.ContentRowLabels>
@@ -190,9 +191,10 @@ function PersonalData() {
 
               <InputLabelRGEmissionDate
                 label='Data de emissão'
-                error={JSON.stringify(errors.RGEmissionDate)}
-                touched={JSON.stringify(touched.RGEmissionDate)}
+                error={errors.RGEmissionDate}
+                touched={touched.RGEmissionDate}
                 isHalf={3}
+                placeholder='dd/mm/aaaa'
               />
             </S.ContentRowLabels>
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
-import { Plus } from 'phosphor-react';
+import { Plus, TrashSimple } from 'phosphor-react';
 import { useNavigate } from 'react-router-dom';
 import { validateCPF } from 'validations-br';
 
@@ -55,7 +55,7 @@ function Register() {
 	const registerInfo = {
 		name: '',
 		socialName: '',
-		date: new Date(),
+		date: '',
 		civilState: '',
 		sex: '',
 		nationality: '',
@@ -65,7 +65,7 @@ function Register() {
 		email: '',
 		RG: '',
 		RGDispatcher: '',
-		RGEmissionDate: new Date(),
+		RGEmissionDate: '',
 		CPF: '',
 	};
 
@@ -121,9 +121,10 @@ function Register() {
 
 							<InputLabelDate
 								label='Data de nascimento'
-								error={JSON.stringify(errors.date)}
-								touched={JSON.stringify(touched.date)}
+								error={errors.date}
+								touched={touched.date}
 								isHalf={1}
+								placeholder='dd/mm/aaaa'
 							/>
 
 							<S.ContentRowLabels>
@@ -199,13 +200,10 @@ function Register() {
 
 								<InputLabelRGEmissionDate
 									label='Data de emissão'
-									error={JSON.stringify(
-										errors.RGEmissionDate
-									)}
-									touched={JSON.stringify(
-										touched.RGEmissionDate
-									)}
+									error={errors.RGEmissionDate}
+									touched={touched.RGEmissionDate}
 									isHalf={3}
+									placeholder='dd/mm/aaaa'
 								/>
 							</S.ContentRowLabels>
 
@@ -224,7 +222,7 @@ function Register() {
 								<ButtonSecondary
 									type='button'
 									name='Cancelar'
-									iconName={null}
+									iconName={TrashSimple}
 									onClick={() => navigate('/assisted')}
 								/>
 								<div style={{ marginLeft: 30 }}>
