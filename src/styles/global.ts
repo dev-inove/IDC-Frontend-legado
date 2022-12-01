@@ -15,7 +15,7 @@ const Global = createGlobalStyle`
     --secondColor: #FFCB77;
     --textColor500: #323232;
     --textColor300: #666666;
-    --textColor200: ##999999;
+    --textColor200: #999999;
     --textColor100: #CCCCCC;
     --navigationHoverSideBar: #F4F5F5;
     --borderInput: #E9E7E7;

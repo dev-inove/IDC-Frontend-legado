@@ -20,6 +20,7 @@ export const ButtonContent = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 `;
 
 export const TextButtonName = styled.h4`

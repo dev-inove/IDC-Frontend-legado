@@ -7,6 +7,7 @@ import { EnvelopeSimple, LockSimple } from 'phosphor-react';
 import * as Yup from 'yup';
 
 import Logo from '~/assets/images/logo.svg';
+import person from '~/assets/images/person.svg';
 import Banner from '~/assets/images/banner_login.svg';
 
 import * as S from './styles';

@@ -1,16 +1,14 @@
 import styled from 'styled-components';
 import * as Select from '@radix-ui/react-select';
 
-export const Container = styled.div``;
-
-export const AssistedsContainer = styled.div`
+export const Container = styled.div`
   background-color: var(--backgroundGrayContent);
-  height: 100vh;
+  height: 100%;
+  margin-left: 16rem;
   overflow: hidden;
   overflow-x: hidden;
-  margin-left: 16rem;
   min-width: 582.55px;
-  padding: 35px 45px;
+  padding: 50px 50px 50px 50px;
   :hover {
     overflow-x: auto;
     overflow-y: auto;
