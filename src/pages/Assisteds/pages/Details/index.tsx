@@ -1,9 +1,9 @@
 import { useState } from 'react';
-
 import { Tabs, TabPanel } from 'react-tabs';
 // Importando icones do react-icons
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import 'react-datepicker/dist/react-datepicker.css';
 // Importando styles e atribuindo prefixo "S"
 import * as S from './styles';

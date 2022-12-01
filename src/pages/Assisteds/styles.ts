@@ -2,7 +2,16 @@ import styled from 'styled-components';
 import * as Select from '@radix-ui/react-select';
 
 export const Container = styled.div`
-  width: calc(100vw - 18rem);
+  height: 100%;
+  margin-left: 16rem;
+  overflow: hidden;
+  overflow-x: hidden;
+  min-width: 582.55px;
+  padding: 50px 50px 50px 50px;
+  :hover {
+    overflow-x: auto;
+    overflow-y: auto;
+  }
 `;
 
 export const Welcome = styled.h1`

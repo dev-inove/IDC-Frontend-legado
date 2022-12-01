@@ -3,7 +3,7 @@ import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
 
 export const Container = styled.div`
   display: flex;
-  min-height: 100vh;
+  min-height: 100%;
   background-color: var(--background);
 
   @media(max-width: 950px) {

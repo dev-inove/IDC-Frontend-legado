@@ -4,5 +4,7 @@
   "printWidth": 80,
   "bracketSpacing": true,
   "arrowParens": "always",
-  "singleAttributePerLine": false
+  "singleAttributePerLine": false,
+  "tabWidth": 4,
+  "useTabs": true
 }

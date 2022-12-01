@@ -6,11 +6,12 @@ import * as S from './styles';
 interface PropsInputLabelDate {
   label: string;
   error: string | undefined;
-  touched: string | undefined;
+  touched: boolean | undefined;
   isHalf: number;
+  placeholder: string | undefined;
 }
 
-function InputLabelDate({ label, error, touched }: PropsInputLabelDate) {
+function InputLabelDate({ label, error, touched, placeholder }: PropsInputLabelDate) {
   return (
     <S.FormInput>
       <S.ContainerTextInput>
@@ -29,6 +30,7 @@ function InputLabelDate({ label, error, touched }: PropsInputLabelDate) {
             onChange={(val) => {
               setFieldValue(field.name, val);
             }}
+            placeholderText={placeholder}
           />
         )}
       </Field>

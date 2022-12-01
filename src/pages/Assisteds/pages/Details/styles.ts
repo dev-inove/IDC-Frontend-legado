@@ -4,8 +4,16 @@ import { Tab, TabList } from 'react-tabs';
 import * as Select from '@radix-ui/react-select';
 
 export const Container = styled.div`
-  width: calc(100vw - 18rem);
-  padding-right: 50px;
+  height: 100%;
+  margin-left: 16rem;
+  overflow: hidden;
+  overflow-x: hidden;
+  min-width: 582.55px;
+  padding: 50px 50px 50px 50px;
+  :hover {
+    overflow-x: auto;
+    overflow-y: auto;
+  }
   font-family: Poppins;
 `;
 
@@ -20,7 +28,6 @@ export const Welcome = styled.h1`
 export const Header = styled.header`
   display: flex;
   align-items: center;
-  padding-top: 30px;
   margin-bottom: 30px;
 `;
 
@@ -28,6 +35,7 @@ export const CustomTabList = styled(TabList).attrs((props) => ({
   className: props.className,
 }))`
   width: 100%;
+  min-width: auto;
   border-bottom: 1.5px solid var(--textColor200);
   margin-bottom: 30px;
 
