@@ -1,52 +1,40 @@
 <h1 align="center">Instituto dos cegos</h1>
-<p align="center">Projeto <strong>IDC</strong> desenvolvido em ReactJS pela equipe do Inove</p>
-<p align="center">
-  <a aria-label="Inove" href="https://github.com/dev-inove">
-    <img src="https://img.shields.io/badge/Inove-2022-informational"></img>
-  </a>
-  <a aria-label="ReactJS" href="">
-    <img src="https://img.shields.io/badge/ReactJS-17.0.2-informational"></img>
-  </a>
-  <a aria-label="TypeScript" href="">
-    <img src="https://img.shields.io/badge/typescript-4.3.5-informational"></img>
-  </a>
-</p>
 
+<p align="center">Este é o Repositório da Aplicação Frontend do Projeto <strong>IDC</strong> desenvolvido em ReactJS pela equipe do Inove</p>
+
+<p align="center">Tecnologias utilizadas:</p>
 
 <p align="center">
-  <a href="#-execução">Execução</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-site">Site</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-como-contribuir">Como contribuir</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <img align="center" src="https://img.shields.io/badge/ReactJS-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="ReactJS" />
+  <img align="center" src="https://img.shields.io/badge/Styled%20Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=black" alt="Styled Components" />
+  <img align="center" src="https://img.shields.io/badge/React%20Router-CA4245?style=for-the-badge&logo=react-router&logoColor=black" alt="React Router" />
+  <img align="center" src="https://img.shields.io/badge/Typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="Typescript" />
 </p>
+
+---
 
 ## 🚀 Execução
 
-_ps: Se precisar de ajuda para fazer um clone, esse [tutorial aqui](https://help.github.com/pt/github/creating-cloning-and-archiving-repositories/cloning-a-repository) vai te ajudar._
+_ps: Se precisar de ajuda para fazer um clone, esse [tutorial aqui](https://docs.github.com/pt/repositories/creating-and-managing-repositories/cloning-a-repository) vai te ajudar._
 
-1. Abra o terminal do seu computador. Se estiver no Windows, pode ser o Prompt de Comando ou PowerShell. Caso use o WSL no Windows, use o Windows Terminal, usando o Ubuntu ou qualquer distribuição suportada pelo WSL.
-2. Altere o diretório de trabalho atual para o local em que deseja ter o código do módulo salvo no seu computador.
-3. Faça um clone desse repositório rodando: <br> `git clone https://github.com/dev-inove/instituto-dos-cegos-front.git`;
-4. Entre na pasta rodando pelo terminal: `cd instituto-dos-cegos-front`;
-6. Rode `npm install` ou `yarn` caso utilize para instalar as dependências do projeto;
-7. Rode `npx start` ou `yarn start` caso utilize para iniciar o site.
-
-## 💻 Site
-
-## ⚠️ Em desenvolvimento
+1. Faça um clone desse repositório rodando: <br> `git clone https://github.com/dev-inove/IDC-frontend.git`;
+2. Entre na pasta rodando pelo terminal: `cd IDC-frontend`;
+3. Rode `npm install` ou `yarn` caso utilize para instalar as dependências do projeto;
+4. Rode `npx start` ou `yarn start` caso utilize para iniciar o site.
+---
 
 ## 🤔 Como contribuir
-
+_ps: olhar os [padrões de projeto](https://github.com/dev-inove/.github/blob/main/DOCUMENTATION_STANDARDS.md) para mais detalhes sobre o modelo de colaboração._
 Se quiser contribuir para esse repositório aqui, seja corrigindo algum problema, adicionando comentários ou melhorando a documentação, você pode seguir esse tutorial abaixo:
 
-- Faça [um fork](https://help.github.com/pt/github/getting-started-with-github/fork-a-repo) desse repositório;
-- Entre no seu perfil no GitHub e faça um clone do repositório que você fez um *fork*;
-- Crie uma *branch* com a sua alteração: `git checkout -b minha-alteracao`;
-- Faça as alterações necessárias no código ou na documentação;
-- Faça *commit* das suas alterações: `git commit -m 'feat: Minha nova feature'`;
-- Faça *push* para a sua *branch*: `git push origin minha-alteracao`;
-- Agora é só abrir a sua *pull request* no repositório que você fez o *fork*;
+1. faça as etapas 1 e 2 do tutorial de execução
+2. Crie uma *branch* com a sua alteração: `git checkout -b minha-alteracao`;
+3. Faça as alterações necessárias no código ou na documentação;
+4. Faça *commit* das suas alterações: `git commit -m 'feat: Minha nova feature'`;
+5. Faça *push* para a sua *branch*: `git push origin minha-alteracao`;
+6. Agora é só abrir uma *pull request* da sua branch para a branch `dev`;
 
-Depois que o *merge* da sua *pull request* for feito, você pode deletar a sua *branch*.
+Depois que o *merge* da sua *pull request* for feito pelos outros colaboradores da célula, você pode deletar a sua *branch*.
 
 
 ---
