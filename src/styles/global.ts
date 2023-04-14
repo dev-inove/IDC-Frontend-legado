@@ -17,6 +17,11 @@ const Global = createGlobalStyle`
     --textColor300: #666666;
     --textColor200: #999999;
     --textColor100: #CCCCCC;
+    --darkGray: #2C3A4F;
+    --lightGray: #B8B8B8;
+    --stripeColor: #F0F3F4;
+    --hoverColor: #F0F3F4;
+
     --navigationHoverSideBar: #F4F5F5;
     --borderInput: #E9E7E7;
   }
