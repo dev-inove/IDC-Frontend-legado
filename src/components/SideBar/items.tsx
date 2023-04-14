@@ -1,7 +1,7 @@
 import React from 'react';
 import { House, Users, CalendarPlus, User } from 'phosphor-react';
 
-const SidebarItems = [
+const items = [
   {
     id: 0,
     name: 'Página inicial',
@@ -28,4 +28,4 @@ const SidebarItems = [
   },
 ];
 
-export default SidebarItems;
+export default items;

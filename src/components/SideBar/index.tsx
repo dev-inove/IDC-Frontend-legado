@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 import Logo from '~/assets/images/logo.svg';
 
-import SidebarItems from './SidebarItems';
+import items from './items';
 import * as S from './styles';
 
 function SideBar() {
@@ -26,7 +26,7 @@ function SideBar() {
   }
 
   useEffect(() => {
-    const activeItem = SidebarItems.findIndex(
+    const activeItem = items.findIndex(
       (item) => getPath(item.route) === getPath(pathname)
     );
     changeActiveIndex(activeItem);
@@ -39,7 +39,7 @@ function SideBar() {
           <S.ImgLogo src={Logo} alt='Logo' />
         </S.ContainerLogo>
         <S.ContainerHeader>
-          {SidebarItems.map((item, index) => (
+          {items.map((item, index) => (
             <S.NavLink to={item.route} key={item.id}>
               <S.NavLinkItens active={index === activeIndex}>
                 <S.IconLink>{item.iconName}</S.IconLink>
