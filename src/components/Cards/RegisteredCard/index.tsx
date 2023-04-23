@@ -6,7 +6,7 @@ import ActivitiesTable from '~/components/Tables/ActivitiesTable';
 function RegisteredCard() {
     const [isActive, setIsActive] = useState(false);
     
-    const handleClick = () => setIsActive(current => !current);
+    const handleClick = (value: Boolean) => setIsActive(!!value);
 
     return(
         <S.ContainerRegisteredCard>
@@ -16,7 +16,7 @@ function RegisteredCard() {
                     color: isActive ? 'var(--textGray)' : 'var(--black)',
                     borderBottom: isActive ?  '1px solid transparent' : '1px solid var(--black)',
                 }}
-                onClick={handleClick}
+                onClick={() => {handleClick(false)}}
                 >
                     Assistidos
                 </S.RegisteredButton>
@@ -24,14 +24,12 @@ function RegisteredCard() {
                     color: isActive ? 'var(--black)' : 'var(--textGray)',
                     borderBottom: isActive ? '1px solid var(--black)' : '1px solid transparent',
                 }}
-                onClick={handleClick}
+                onClick={() => {handleClick(true)}}
                 >
                     Atividades
                 </S.RegisteredButton>
             </S.RegisteredNavBar>
-            { isActive === true && <ActivitiesTable /> }
-            { isActive === false && <AssistedTable /> }
-            <S.seeMore>Ver mais</S.seeMore>
+            { isActive?( <ActivitiesTable />): (<AssistedTable />)}
         </S.ContainerRegisteredCard>
     );
 }

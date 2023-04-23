@@ -52,7 +52,7 @@ color: #323232;
   padding: 10px 0;
   width: 110px;`
 
-  export const seeMore = styled.span`
+  export const seeMore = styled.button`
   color: var(--primaryColor);
   cursor: pointer;
   font-family: 'Poppins';

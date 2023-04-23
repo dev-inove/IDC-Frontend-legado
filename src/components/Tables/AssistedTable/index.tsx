@@ -1,46 +1,58 @@
-import * as React from 'react';
 import { useState, useEffect } from 'react';
-import { DataGrid, GridColDef } from '@mui/x-data-grid';
-import { LinearProgress } from '@mui/material';
+import * as db from '../db.json';
+import * as S from '../styles';
 
-const columns: GridColDef[] = [
-    { field: 'id', headerName: 'ID', width: 250, sortable: false },
-    { field: 'fullName', headerName: 'Nome completo', width: 250, sortable: false },
-    { field: 'birthDate', headerName: 'Data de nascimento', width: 250, sortable: false },
-    { field: 'age', headerName: 'Idade', width: 250, sortable: false },
-    { field: 'gender', headerName: 'Sexo', width: 250, sortable: false },
-    { field: 'visualImpairment', headerName: 'Grau de deficiência visual', width: 300, sortable: false },
-];
+import {Table} from "~/components/Table";
+import { addZeros } from '~/utils/masks';
 
 const AssistedTable = () => {
+  const [tableData, setTableData] = useState<any[]>([]);
+  const [ showMore, setShowMore ] = useState<boolean>(false);
 
-  const [tableData, setTableData] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:4000/assisted")
-      .then((data) => data.json())
-      .then((data) => setTableData(data))
-
-  }, [])
+  useEffect(()=> {
+    if (showMore) {
+      setTableData(JSON.parse(JSON.stringify(db.assisted)).slice(0,20))
+    } else {
+      setTableData(JSON.parse(JSON.stringify(db.assisted)).slice(0,4))
+    }
+  }, [showMore])
 
   return (
-    <div style={{ display: 'flex', height: 150, width: '100%', marginTop: '20px' }}>
-      <DataGrid
-        sx={{
-          fontFamily: 'Poppins',
-          fontSize: '16px',
-          fontWeight: 600,
-        }}
-        rows={tableData}
-        rowHeight={50}
-        columns={columns}
-        hideFooter
-        disableColumnMenu={true}
-        components={{
-          LoadingOverlay: LinearProgress,
-        }}/>
+    <div style={{ display: 'flex', flexDirection: 'column', width: '100%', marginTop: '20px' }}>
+      <Table>
+      <thead>
+          <tr>
+            <th style ={{width:'8.5%',textAlign:'start'}}>ID</th>
+            <th style ={{width:'23%'}}>Nome completo</th>
+            <th style ={{width:'23%'}}>Data de nascimento</th>
+            <th style ={{width:'9.4%'}}>Idade</th>
+            <th style ={{width:'13.3%'}}>Sexo</th>
+            <th>Grau de deficiência visual</th>
+          </tr>
+        </thead>
+        <tbody>
+          {      
+            tableData.map((item, index) => {
+              return (
+                <tr key={index}>
+                  <td>{addZeros(item.id, 2)}</td>
+                  <td>{item.fullName}</td>
+                  <td>{item.birthDate}</td>
+                  <td>{addZeros(item.age, 2)}</td>
+                  <td>{item.gender == "Male"?"Masculino":"Feminino"}</td>
+                  <td>{item.visualImpairment}</td>
+                </tr>
+              )
+            })
+          }
+        </tbody>
+      </Table>
+      <S.seeMore
+       onClick={() => setShowMore(current => !current)}
+      >{showMore? "Ver menos": "Ver mais"}
+      </S.seeMore>
     </div>
   )
 }
 
-export default AssistedTable;
+export default AssistedTable
