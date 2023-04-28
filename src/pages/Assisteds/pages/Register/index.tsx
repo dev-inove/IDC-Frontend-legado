@@ -1,12 +1,9 @@
-import React from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { Plus, TrashSimple } from 'phosphor-react';
 import { useNavigate } from 'react-router-dom';
 import { validateCPF } from 'validations-br';
-
 import Person from '~/assets/images/person.svg';
-
 import InputLabel from '~/components/Inputs/InputLabel';
 import InputLabelDate from '~/components/Inputs/InputLabelDate';
 import InputLabelRGEmissionDate from '~/components/Inputs/InputLabelRGEmissionDate';
@@ -14,8 +11,7 @@ import InputLabelCivilStatus from '~/components/Inputs/InputLabelCivilStatus';
 import InputLabelGender from '~/components/Inputs/InputLabelGender';
 import InputLabelPhone from '~/components/Inputs/InputLabelPhone';
 import InputDegreeDisability from '~/components/Inputs/InputDegreeDisability';
-import ButtonPrimary from '~/components/ButtonPrimary';
-import ButtonSecondary from '~/components/ButtonSecondary';
+import { Button } from '~/components/Button/index';
 import 'react-datepicker/dist/react-datepicker.css';
 import * as S from './styles';
 
@@ -219,18 +215,23 @@ function Register() {
 							/>
 
 							<S.ContentButtons>
-								<ButtonSecondary
+								<Button
 									type='button'
 									name='Cancelar'
-									iconName={TrashSimple}
 									onClick={() => navigate('/assisted')}
-								/>
+								>
+									<TrashSimple size={14} weight="bold" />
+									Cancelar
+								</Button>
 								<div style={{ marginLeft: 30 }}>
-									<ButtonPrimary
+									<Button
+										property='primary'
 										type='submit'
 										name='Cadastrar'
-										iconName={Plus}
-									/>
+									>
+										<Plus size={14} weight="bold" />
+										Cadastrar
+									</Button>
 								</div>
 							</S.ContentButtons>
 						</Form>

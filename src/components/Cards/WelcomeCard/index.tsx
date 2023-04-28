@@ -1,5 +1,3 @@
-import React from 'react';
-
 import welcomeLogo from '~/assets/images/welcome_logo.svg';
 
 import * as S from './styles';

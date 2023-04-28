@@ -1,13 +1,12 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
 import { CheckIcon } from '@radix-ui/react-icons';
 import { Formik, Form } from 'formik';
+import { Button } from '~/components/Button';
 import { EnvelopeSimple, LockSimple } from 'phosphor-react';
 import * as Yup from 'yup';
 
 import Logo from '~/assets/images/logo.svg';
-import person from '~/assets/images/person.svg';
 import Banner from '~/assets/images/banner_login.svg';
 
 import * as S from './styles';
