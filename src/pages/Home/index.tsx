@@ -1,12 +1,10 @@
-import React from 'react';
-
-import HomeCards from '~/components/Cards/HomeCards';
+import HomeCard from '~/components/Cards/HomeCard';
 import * as S from './styles';
 
 function Home() {
   return (
     <S.HomeContainer>
-      <HomeCards />
+      <HomeCard />
     </S.HomeContainer>
   );
 }

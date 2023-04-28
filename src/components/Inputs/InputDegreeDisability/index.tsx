@@ -1,4 +1,3 @@
-import React from 'react';
 import { ChevronDownIcon } from '@radix-ui/react-icons';
 import * as Select from '@radix-ui/react-select';
 import { Field } from 'formik';
