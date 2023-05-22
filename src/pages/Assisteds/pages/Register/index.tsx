@@ -1,4 +1,3 @@
-import React from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { Plus, TrashSimple } from 'phosphor-react';
@@ -14,38 +13,39 @@ import InputLabelCivilStatus from '~/components/Inputs/InputLabelCivilStatus';
 import InputLabelGender from '~/components/Inputs/InputLabelGender';
 import InputLabelPhone from '~/components/Inputs/InputLabelPhone';
 import InputDegreeDisability from '~/components/Inputs/InputDegreeDisability';
-import ButtonPrimary from '~/components/ButtonPrimary';
-import ButtonSecondary from '~/components/ButtonSecondary';
+
+import { Button } from '~/components/Button/index';
+
 import 'react-datepicker/dist/react-datepicker.css';
-import * as S from './styles';
+import * as styles from './styles';
 
 const schema = Yup.object().shape({
 	name: Yup.string().required('O nome é obrigatório'),
 	socialName: Yup.string().min(2, 'Digite pelo menos 2 caracteres'),
-	date: Yup.date().required('Data de nascimento obrigatória'),
-	civilState: Yup.string().required('Estado civil é obrigatório'),
+	date: Yup.date().required('A Data de nascimento é obrigatória'),
+	civilState: Yup.string().required('O Estado civil é obrigatório'),
 	sex: Yup.string().required('O sexo é obrigatório'),
-	nationality: Yup.string().required('Obrigatório'),
-	naturalness: Yup.string().required('Obrigatório'),
-	degreeDisability: Yup.string().required(
-		'O grau de deficiência é obrigatório'
-	),
+	nationality: Yup.string().required('A nacionalidade é obrigatória'),
+	naturalness: Yup.string().required('A naturalidade é obrigatória'),
+	degreeDisability: Yup.string().required('O grau de deficiência é obrigatório'),
+
 	phone: Yup.number()
 		.integer('Número invalido')
-		.min(9, 'teste')
+		.min(9, 'Digite pelo menos 9 caracteres')
 		.required('O número é obrigatório'),
 	email: Yup.string()
 		.email('Email inválido')
 		.required('O e-mail é obrigatório'),
 	RG: Yup.number()
 		.typeError('Apenas números')
-		.integer('Número invalido')
+		.integer('Número inválido')
 		.required('O RG é obrigatório'),
+
 	RGDispatcher: Yup.string().max(3, 'Max 3').required('*'),
 	RGEmissionDate: Yup.date().required('*'),
 	CPF: Yup.string()
 		.typeError('Apenas números')
-		.test('is-cpf', 'CPF não é valido', (value) =>
+		.test('is-cpf', 'CPF inválido', (value) =>
 			validateCPF(value as string)
 		)
 		.required('O CPF é obrigatório'),
@@ -71,22 +71,19 @@ function Register() {
 
 	const navigate = useNavigate();
 
-	function onSubmit(values: any) {
-		console.log(values);
-	}
-
 	return (
-		// Div
-		<S.RegisterPageContainer>
-			<S.FormContainer>
-				<S.Welcome>Cadastrar assistido</S.Welcome>
-				<S.WelcomeParagraph>
+		<styles.RegisterPageContainer>
+			<styles.FormContainer>
+				<styles.RegisterTitle>Cadastrar assistido</styles.RegisterTitle>
+				<styles.RegisterParagraph>
 					Preencha todos os campos abaixo para cadastrar uma pessoa.
-				</S.WelcomeParagraph>
+				</styles.RegisterParagraph>
 				<Formik
 					initialValues={registerInfo}
 					validationSchema={schema}
-					onSubmit={onSubmit}
+					onSubmit={
+						(values: any) => console.log(values)
+					}
 				>
 					{({
 						values,
@@ -101,7 +98,7 @@ function Register() {
 								label='Nome completo'
 								error={errors.name}
 								touched={touched.name}
-								placeholder='Lucas Pereira Silva'
+								placeholder='Lucas Pereira da Silva'
 								value={values.name}
 								onChange={handleChange('name')}
 								onBlur={handleBlur('name')}
@@ -127,12 +124,12 @@ function Register() {
 								placeholder='dd/mm/aaaa'
 							/>
 
-							<S.ContentRowLabels>
+							<styles.ContentRowLabels>
 								<InputLabelCivilStatus label='Estado civil' />
 								<InputLabelGender label='Sexo' />
-							</S.ContentRowLabels>
+							</styles.ContentRowLabels>
 
-							<S.ContentRowLabels>
+							<styles.ContentRowLabels>
 								<InputLabel
 									label='Nacionalidade'
 									error={errors.nationality}
@@ -153,7 +150,7 @@ function Register() {
 									onBlur={handleBlur('naturalness')}
 									isHalf={2}
 								/>
-							</S.ContentRowLabels>
+							</styles.ContentRowLabels>
 
 							<InputDegreeDisability label='Grau de deficiência visual' />
 
@@ -176,7 +173,7 @@ function Register() {
 								isHalf={1}
 							/>
 
-							<S.ContentRowLabels>
+							<styles.ContentRowLabels>
 								<InputLabel
 									label='RG'
 									error={errors.RG}
@@ -205,7 +202,7 @@ function Register() {
 									isHalf={3}
 									placeholder='dd/mm/aaaa'
 								/>
-							</S.ContentRowLabels>
+							</styles.ContentRowLabels>
 
 							<InputLabel
 								label='CPF'
@@ -218,29 +215,35 @@ function Register() {
 								isHalf={1}
 							/>
 
-							<S.ContentButtons>
-								<ButtonSecondary
+							<styles.ButtonsContainer>
+								<Button
+									property='secondary'
 									type='button'
 									name='Cancelar'
-									iconName={TrashSimple}
 									onClick={() => navigate('/assisted')}
-								/>
+								>
+									<TrashSimple size={14} weight="bold" />
+									Cancelar
+								</Button>
 								<div style={{ marginLeft: 30 }}>
-									<ButtonPrimary
+									<Button
+										property='primary'
 										type='submit'
 										name='Cadastrar'
-										iconName={Plus}
-									/>
+									>
+										<Plus size={14} weight="bold" />
+										Cadastrar
+									</Button>
 								</div>
-							</S.ContentButtons>
+							</styles.ButtonsContainer>
 						</Form>
 					)}
 				</Formik>
-			</S.FormContainer>
-			<S.ImageContainer>
-				<S.ImagePerson src={Person} />
-			</S.ImageContainer>
-		</S.RegisterPageContainer>
+			</styles.FormContainer>
+			<styles.ImageContainer>
+				<styles.Image src={Person} />
+			</styles.ImageContainer>
+		</styles.RegisterPageContainer>
 	);
 }
 

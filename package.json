@@ -23,7 +23,7 @@
     "react-phone-input-2": "^2.15.0",
     "react-router-dom": "^6.3.0",
     "react-tabs": "^5.1.0",
-    "styled-components": "^5.3.6",
+    "styled-components": "^5.3.10",
     "validations-br": "^1.2.0",
     "yup": "^0.32.11"
   },

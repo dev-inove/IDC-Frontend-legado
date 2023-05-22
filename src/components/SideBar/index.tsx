@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import Logo from '~/assets/images/logo.svg';
 
 import items from './items';
-import * as S from './styles';
+import * as styles from './styles';
 
 function SideBar() {
   const { pathname } = useLocation();
@@ -33,30 +33,30 @@ function SideBar() {
   }, [pathname]);
 
   return (
-    <S.Container>
-      <S.ContainerAside>
-        <S.ContainerLogo>
-          <S.ImgLogo src={Logo} alt='Logo' />
-        </S.ContainerLogo>
-        <S.ContainerHeader>
+    <styles.Container>
+      <styles.ContainerAside>
+        <styles.ContainerLogo>
+          <styles.ImgLogo src={Logo} alt='Logo' />
+        </styles.ContainerLogo>
+        <styles.ContainerHeader>
           {items.map((item, index) => (
-            <S.NavLink to={item.route} key={item.id}>
-              <S.NavLinkItens active={index === activeIndex}>
-                <S.IconLink>{item.iconName}</S.IconLink>
-                <S.TextIcons>{item.name}</S.TextIcons>
-              </S.NavLinkItens>
-            </S.NavLink>
+            <styles.NavLink to={item.route} key={item.id}>
+              <styles.NavLinkItens active={index === activeIndex}>
+                <styles.IconLink>{item.iconName}</styles.IconLink>
+                <styles.TextIcons>{item.name}</styles.TextIcons>
+              </styles.NavLinkItens>
+            </styles.NavLink>
           ))}
-        </S.ContainerHeader>
-        <S.ContainerBottom>
-          <S.Line />
-          <S.NavLink to='/'>
-            <S.IconFiLogOut size={20} />
-            <S.TextIcons>Sair</S.TextIcons>
-          </S.NavLink>
-        </S.ContainerBottom>
-      </S.ContainerAside>
-    </S.Container>
+        </styles.ContainerHeader>
+        <styles.ContainerBottom>
+          <styles.Line />
+          <styles.NavLink to='/'>
+            <styles.IconFiLogOut size={20} />
+            <styles.TextIcons>Sair</styles.TextIcons>
+          </styles.NavLink>
+        </styles.ContainerBottom>
+      </styles.ContainerAside>
+    </styles.Container>
   );
 }
 

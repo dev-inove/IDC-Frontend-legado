@@ -20,14 +20,14 @@ export const FormContainer = styled.div`
 	width: 30rem;
 `;
 
-export const Welcome = styled.h1`
+export const RegisterTitle = styled.h1`
 	font-size: 30px;
 	font-weight: 600;
 	line-height: 47px;
 	color: var(--textColor500);
 `;
 
-export const WelcomeParagraph = styled.p`
+export const RegisterParagraph = styled.p`
 	margin-top: 5px;
 	margin-bottom: 40px;
 	font-size: 17px;
@@ -40,40 +40,14 @@ export const ImageContainer = styled.div`
 	width: 90%;
 	margin-left: 5%;
 	height: auto;
-	@media (max-width: 1366px) {
-		//margin-left: 7rem;
-	}
-	@media (max-width: 1280px) {
-		//height: 8rem;
-	}
-	@media (max-width: 1150px) {
-		//height: 7rem;
-	}
-	@media (max-width: 1080px) {
-		//width: 100%;
-		//min-width: 484px;
-	}
 `;
 
-export const ImagePerson = styled.img`
+export const Image = styled.img`
 	max-width: 30rem;
 	min-width: 15rem;
 	width: 100%;
 	height: width;
 	margin-top: 0px;
-	@media (max-width: 1366px) {
-		//margin-left: 7rem;
-	}
-	@media (max-width: 1280px) {
-		//height: 8rem;
-	}
-	@media (max-width: 1150px) {
-		//height: 7rem;
-	}
-	@media (max-width: 1080px) {
-		//width: 100%;
-		//min-width: 484px;
-	}
 `;
 
 export const StyledTrigger = styled(Select.SelectTrigger)`
@@ -125,7 +99,7 @@ export const ContentRowLabels = styled.div`
 	justify-content: space-between;
 `;
 
-export const ContentButtons = styled.div`
+export const ButtonsContainer = styled.div`
 	display: flex;
 	justify-content: end;
 `;

@@ -6,8 +6,7 @@ import { Formik, Form } from 'formik';
 import { TrashSimple, PencilSimpleLine } from 'phosphor-react';
 
 // Import componentes
-import ButtonPrimary from '~/components/ButtonPrimary';
-import ButtonSecondary from '~/components/ButtonSecondary';
+import { Button } from '~/components/Button/index';
 import InputLabel from '~/components/Inputs/InputLabel';
 // Import estilos e icones
 import * as S from '../styles';
@@ -134,18 +133,23 @@ function Adress() {
               />
             </ContentRowLabels>
             <S.ContentButtons>
-              <ButtonSecondary
+              <Button
                 type='button'
-                name='Remover endereço'
-                iconName={TrashSimple}
+                name='Remover Endereço'
                 onClick={() => navigate('/assisted')}
-              />
+              >
+                <TrashSimple size={14} weight='bold' />
+                Remover Endereço
+              </Button>
               <div style={{ marginLeft: 30 }}>
-                <ButtonPrimary
+                <Button
+                  property='primary'
                   type='submit'
                   name='Concluir Edição'
-                  iconName={PencilSimpleLine}
-                />
+                >
+                  <PencilSimpleLine size={14} weight='bold' />
+                  Concluir Edição
+                </Button>
               </div>
             </S.ContentButtons>
           </Form>

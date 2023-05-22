@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
+import { Button } from '~/components/Button';
 
 export const Container = styled.div`
   display: flex;
@@ -222,28 +223,14 @@ export const CheckBox = styled(CheckboxPrimitive.Root)`
   height: 20px;
 `;
 
-export const ButtonLogin = styled.button`
+export const LoginButton = styled(Button)`
+  font-weight: 500;
+  font-size: 18px;
   min-width: 100%;
   height: 50px;
   margin-top: 40px;
-  border-radius: 40px;
-  border: none;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--primaryColor);
+  border-radius: 30px;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
-  transition: 0.7s;
-  :hover {
-    background-color: var(--primaryColorHover);
-  }
-`;
-
-export const TextButtonLogin = styled.h4`
-  font-weight: 500;
-  font-size: 18px;
-  align-items: center;
-  justify-content: center;
-  color: var(--background);
 `;
 
 

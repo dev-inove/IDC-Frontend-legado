@@ -1,4 +1,3 @@
-import React from 'react';
 import { House, Users, CalendarPlus, User } from 'phosphor-react';
 
 const items = [

@@ -13,8 +13,7 @@ import InputLabelGender from '~/components/Inputs/InputLabelGender';
 import InputDegreeDisability from '~/components/Inputs/InputDegreeDisability';
 import InputLabelPhone from '~/components/Inputs/InputLabelPhone';
 import InputLabelRGEmissionDate from '~/components/Inputs/InputLabelRGEmissionDate';
-import ButtonPrimary from '~/components/ButtonPrimary';
-import ButtonSecondary from '~/components/ButtonSecondary';
+import { Button } from '~/components/Button/index';
 // Import estilos e icones
 import * as S from '../styles';
 
@@ -210,14 +209,23 @@ function PersonalData() {
             />
 
             <S.ContentButtons>
-              <ButtonSecondary
+              <Button
                 type='button'
                 name='Cancelar'
-                iconName={TrashSimple}
                 onClick={() => navigate('/assisted')}
-              />
+              >
+                <TrashSimple height={14} weight='bold' />
+                Cancelar
+              </Button>
               <div style={{ marginLeft: 30 }}>
-                <ButtonPrimary type='submit' name='Concluir Edição' iconName={PencilSimpleLine} />
+                <Button
+                property='primary'
+                type='submit'
+                name='Concluir Edição'
+                >
+                  <PencilSimpleLine height={14} weight='bold' />
+                  Concluir Edição
+                </Button>
               </div>
             </S.ContentButtons>
           </Form>

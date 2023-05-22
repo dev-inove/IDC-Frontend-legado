@@ -1,5 +1,5 @@
 // Import componentes
-import ButtonSecondary from '~/components/ButtonSecondary';
+import { Button } from '~/components/Button/index';
 
 // Import estilos e icones
 import * as S from '../styles';
@@ -18,10 +18,9 @@ function Relatives() {
       <S.Text>
         Essa pessoa ainda não possui <br /> nenhum membro familiar cadastrado.
       </S.Text>
-      <ButtonSecondary
+      <Button
         type='button'
         name='Cadastrar'
-        iconName={Plus}
         onClick={onClick}
       />
     </S.RelativesContainer>

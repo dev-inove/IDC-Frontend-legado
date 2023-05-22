@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
 import { CheckIcon } from '@radix-ui/react-icons';
@@ -7,10 +6,9 @@ import { EnvelopeSimple, LockSimple } from 'phosphor-react';
 import * as Yup from 'yup';
 
 import Logo from '~/assets/images/logo.svg';
-import person from '~/assets/images/person.svg';
 import Banner from '~/assets/images/banner_login.svg';
 
-import * as S from './styles';
+import * as styles from './styles';
 
 interface InfoLogin {
   email: string;
@@ -39,14 +37,14 @@ function Login() {
   }
 
   return (
-    <S.Container>
-      <S.ContainerInfo>
-        <S.Welcome>
-          <S.ImgLogo src={Logo} alt='Logo' />
-          <S.WelcomeText>Bem-vindo</S.WelcomeText>
-        </S.Welcome>
-        <S.FormLogin>
-          <S.Line />
+    <styles.Container>
+      <styles.ContainerInfo>
+        <styles.Welcome>
+          <styles.ImgLogo src={Logo} alt='Logo' />
+          <styles.WelcomeText>Bem-vindo</styles.WelcomeText>
+        </styles.Welcome>
+        <styles.FormLogin>
+          <styles.Line />
 
           <Formik
             initialValues={loginInfo}
@@ -64,14 +62,14 @@ function Login() {
               const { email, password } = values;
               return (
                 <Form>
-                  <S.FormInput>
-                    <S.ContainerTextInput>
-                      <S.LabelInput>Digite seu email</S.LabelInput>
+                  <styles.FormInput>
+                    <styles.ContainerTextInput>
+                      <styles.LabelInput>Digite seu email</styles.LabelInput>
                       {errors.email && touched.email ? (
-                        <S.LabelInputAlert>{errors.email}</S.LabelInputAlert>
+                        <styles.LabelInputAlert>{errors.email}</styles.LabelInputAlert>
                       ) : null}
-                    </S.ContainerTextInput>
-                    <S.ContentInput>
+                    </styles.ContainerTextInput>
+                    <styles.ContentInput>
                       <EnvelopeSimple
                         size={22}
                         weight='regular'
@@ -85,24 +83,24 @@ function Login() {
                           color: '#999999',
                         }}
                       />
-                      <S.Input
+                      <styles.Input
                         type='email'
                         placeholder='Ex: nome@gmail.com'
                         value={email}
                         onChange={handleChange('email')}
                         onBlur={handleBlur('email')}
                       />
-                    </S.ContentInput>
-                  </S.FormInput>
+                    </styles.ContentInput>
+                  </styles.FormInput>
 
-                  <S.FormInput>
-                    <S.ContainerTextInput>
-                      <S.LabelInput>Digite sua senha</S.LabelInput>
+                  <styles.FormInput>
+                    <styles.ContainerTextInput>
+                      <styles.LabelInput>Digite sua senha</styles.LabelInput>
                       {errors.password && touched.password ? (
-                        <S.LabelInputAlert>{errors.password}</S.LabelInputAlert>
+                        <styles.LabelInputAlert>{errors.password}</styles.LabelInputAlert>
                       ) : null}
-                    </S.ContainerTextInput>
-                    <S.ContentInput>
+                    </styles.ContainerTextInput>
+                    <styles.ContentInput>
                       <LockSimple
                         size={22}
                         weight='regular'
@@ -116,45 +114,45 @@ function Login() {
                           color: '#999999',
                         }}
                       />
-                      <S.Input
+                      <styles.Input
                         type='password'
                         placeholder='Ex: 123456'
                         value={password}
                         onChange={handleChange('password')}
                         onBlur={handleBlur('password')}
                       />
-                    </S.ContentInput>
-                  </S.FormInput>
+                    </styles.ContentInput>
+                  </styles.FormInput>
 
-                  <S.RecoverPassword>
+                  <styles.RecoverPassword>
                     <div style={{ margin: 0 }}>
-                      <S.CheckBox defaultChecked id='c1'>
+                      <styles.CheckBox defaultChecked id='c1'>
                         <CheckboxPrimitive.Indicator>
                           <CheckIcon />
                         </CheckboxPrimitive.Indicator>
-                      </S.CheckBox>
+                      </styles.CheckBox>
 
-                      <S.LabelRemember>Lembrar de mim</S.LabelRemember>
+                      <styles.LabelRemember>Lembrar de mim</styles.LabelRemember>
                     </div>
                     <div style={{ margin: 2 }}>
-                      <S.ForgotPassword href='#'>
+                      <styles.ForgotPassword href='#'>
                         Esqueceu sua senha?
-                      </S.ForgotPassword>
+                      </styles.ForgotPassword>
                     </div>
-                  </S.RecoverPassword>
-                  <S.ButtonLogin type='submit'>
-                    <S.TextButtonLogin>Entrar</S.TextButtonLogin>
-                  </S.ButtonLogin>
+                  </styles.RecoverPassword>
+                  <styles.LoginButton property='primary'>
+                    Entrar
+                  </styles.LoginButton>
                 </Form>
               );
             }}
           </Formik>
-        </S.FormLogin>
-      </S.ContainerInfo>
-      <S.ContainerLogo>
-        <S.ImgBanner src={Banner} alt='Banner' />
-      </S.ContainerLogo>
-    </S.Container>
+        </styles.FormLogin>
+      </styles.ContainerInfo>
+      <styles.ContainerLogo>
+        <styles.ImgBanner src={Banner} alt='Banner' />
+      </styles.ContainerLogo>
+    </styles.Container>
   );
 }
 
