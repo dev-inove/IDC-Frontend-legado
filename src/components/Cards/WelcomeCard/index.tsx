@@ -15,7 +15,7 @@ function WelcomeCard() {
       <styles.ContainerCardWelcomeImage>
         <styles.CardWelcomeImage
           src={welcomeLogo}
-          alt='Imagem de Boas vindas, nela há um homem utilizando seu notebook com um fone de ouvido sem fio no ouvido, e ele tammbém está em uma chamada com alguém'
+          alt='Imagem de Boas vindas, nela há um homem utilizando seu notebook com um fone de ouvido sem fio no ouvido, e ele também está em uma chamada com alguém'
         />
       </styles.ContainerCardWelcomeImage>
     </styles.ContainerCardWelcome>
